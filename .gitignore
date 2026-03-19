@@ -6,3 +6,5 @@ __pycache__/
 *.sqlite
 *.db
 outputs/charts/*.png
+
+data/raw/
