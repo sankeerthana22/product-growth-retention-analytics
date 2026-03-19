@@ -1,0 +1,3 @@
+segment,customers,avg_revenue,median_revenue,avg_orders,avg_recency_days
+One-time customers,1493,411.24551975887476,255.91,1.0,156.68251841929003
+Repeat customers,2845,2907.9857057996483,1154.47,5.989103690685413,58.87381370826011
