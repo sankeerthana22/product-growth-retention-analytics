@@ -124,3 +124,10 @@ product-growth-retention-analytics/
 ├── requirements.txt
 └── .gitignore
 
+
+
+## Additional SQL Insights
+
+- Revenue was highly concentrated geographically, with the United Kingdom contributing **.29M** in revenue across **3,920** customers, far exceeding all other countries.
+- Monthly revenue fluctuated over time, with stronger performance in **May 2011 (.36K)** and **June 2011 (.05K)** compared with **February 2011 (.08K)**, suggesting seasonality or uneven purchasing cycles.
+- Customer revenue concentration was also visible at the individual level: the top customer generated **.21K**, reinforcing the finding that a small subset of customers drives disproportionate business value.
