@@ -1,20 +1,44 @@
+import os
 import pandas as pd
 
-def segment_conversion_summary(
-    df: pd.DataFrame,
-    segment_col: str,
-    converted_col: str
-) -> pd.DataFrame:
+INPUT = "data/processed/customer_summary.csv"
+OUTPUT = "outputs/tables/customer_segment_summary.csv"
+
+def run_segmentation():
+    os.makedirs("outputs/tables", exist_ok=True)
+
+    df = pd.read_csv(INPUT)
+
     summary = (
-        df.groupby(segment_col)
+        df.groupby("repeat_customer_flag")
           .agg(
-              users=(converted_col, "count"),
-              conversions=(converted_col, "sum")
+              customers=("CustomerID", "count"),
+              avg_revenue=("total_revenue", "mean"),
+              median_revenue=("total_revenue", "median"),
+              avg_orders=("invoice_count", "mean"),
+              avg_recency_days=("recency_days", "mean")
           )
           .reset_index()
     )
-    summary["conversion_rate_pct"] = (summary["conversions"] / summary["users"] * 100).round(2)
-    return summary.sort_values("conversion_rate_pct", ascending=False)
+
+    summary["segment"] = summary["repeat_customer_flag"].map({
+        0: "One-time customers",
+        1: "Repeat customers"
+    })
+
+    summary = summary[[
+        "segment",
+        "customers",
+        "avg_revenue",
+        "median_revenue",
+        "avg_orders",
+        "avg_recency_days"
+    ]]
+
+    summary.to_csv(OUTPUT, index=False)
+
+    print("Saved:", OUTPUT)
+    print(summary)
 
 if __name__ == "__main__":
-    print("Segmentation analysis starter ready.")
+    run_segmentation()

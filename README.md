@@ -1,3 +1,5 @@
+> 📊 This project reveals that **93.09% of revenue is driven by repeat customers**, while the **top 10% of customers generate 61.41% of total sales**, highlighting major retention and concentration risk in an online retail business.
+
 # Customer Retention & Revenue Analytics for Online Retail
 
 An end-to-end data analytics project using Python and SQL-style analytical thinking to evaluate customer purchase behavior, repeat buying patterns, retention dynamics, and revenue concentration for an online retail business.
@@ -88,6 +90,17 @@ Measured the revenue share contributed by top customer groups to understand conc
 - `outputs/charts/avg_revenue_by_segment.png`
 - `outputs/charts/revenue_concentration_summary.png`
 - `outputs/charts/avg_cohort_retention_trend.png`
+
+## Visual Insights
+
+### Revenue by Customer Segment
+![Segment Revenue](outputs/charts/avg_revenue_by_segment.png)
+
+### Revenue Concentration
+![Revenue Concentration](outputs/charts/revenue_concentration_summary.png)
+
+### Cohort Retention Trend
+![Cohort Retention](outputs/charts/avg_cohort_retention_trend.png)
 
 ## Business Value
 
