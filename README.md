@@ -1,89 +1,125 @@
-# Product Growth & Retention Analytics
+# Customer Retention & Revenue Analytics for Online Retail
 
-An end-to-end data analytics project focused on identifying user drop-off, segment-level conversion differences, retention behavior, and experiment-driven conversion improvement opportunities.
+An end-to-end data analytics project using Python and SQL-style analytical thinking to evaluate customer purchase behavior, repeat buying patterns, retention dynamics, and revenue concentration for an online retail business.
 
 ## Business Problem
 
-An e-commerce business wants to improve conversion and revenue. However, users are dropping off before completing key actions. This project investigates the customer journey, identifies high-friction segments, evaluates retention over time, and assesses whether a product change improved conversion performance.
+Online retailers often grow top-line revenue without understanding whether that revenue is driven by healthy repeat-purchase behavior or by a narrow group of high-value customers. This project analyzes transactional retail data to identify customer value patterns, retention weaknesses, and revenue concentration risk.
 
-## Project Objectives
+## Objectives
 
-- Measure user drop-off across the funnel
-- Compare conversion behavior across user segments
-- Evaluate retention trends through cohort analysis
-- Assess experiment results using A/B testing
-- Translate findings into business recommendations and revenue impact
+- Clean and prepare messy real-world transactional data
+- Build a customer-level analytical dataset from raw line-item transactions
+- Compare one-time vs repeat customer behavior
+- Measure retention patterns through cohort analysis
+- Evaluate how much revenue is concentrated among top customer groups
+- Translate findings into business recommendations for growth and retention
 
-## Analysis Components
+## Dataset
 
-### 1. Funnel Analysis
-Used to identify where users are dropping off in the journey.
+This project uses the UCI Online Retail dataset, a real transactional dataset from a UK-based online retailer covering December 2010 through December 2011.
 
-### 2. Segmentation Analysis
-Used to determine which user groups perform differently.
+## Data Cleaning
 
-### 3. Cohort Analysis
-Used to evaluate whether users are retained over time.
+The raw dataset contained missing customer IDs, cancellations, invalid quantities or prices, and duplicate records. Cleaning steps included:
 
-### 4. A/B Test Analysis
-Used to validate whether a product change improved conversion significantly.
+- removing rows with missing `CustomerID`
+- excluding cancellation invoices
+- filtering out non-positive quantity and unit price records
+- parsing transaction timestamps
+- removing exact duplicates
+- creating a `TotalPrice` revenue field
 
-### 5. Revenue Impact
-Used to estimate the business value of conversion improvements.
+## Analytical Layers
+
+### 1. Transaction-Level Cleaning
+Prepared analysis-ready line-item retail data from raw records.
+
+### 2. Customer-Level Summary
+Aggregated transactions into one row per customer with:
+- first and last purchase dates
+- invoice count
+- total units purchased
+- total revenue
+- recency
+- customer lifespan
+- repeat customer flag
+- high-value customer flag
+
+### 3. Segmentation Analysis
+Compared one-time vs repeat customers on:
+- customer counts
+- average revenue
+- median revenue
+- average orders
+- average recency
+
+### 4. Cohort Retention Analysis
+Tracked customer activity by acquisition month and measured retention across later month indices.
+
+### 5. Revenue Concentration Analysis
+Measured the revenue share contributed by top customer groups to understand concentration risk.
+
+## Key Outputs
+
+- `data/processed/online_retail_cleaned.csv`
+- `data/processed/customer_summary.csv`
+- `outputs/tables/customer_segment_summary.csv`
+- `outputs/tables/cohort_retention.csv`
+- `outputs/tables/revenue_concentration_summary.csv`
+- `analysis/business_summary.md`
+
+## Visual Outputs
+
+- `outputs/charts/avg_revenue_by_segment.png`
+- `outputs/charts/revenue_concentration_summary.png`
+- `outputs/charts/avg_cohort_retention_trend.png`
+
+## Business Value
+
+This project demonstrates how customer analytics can be used to:
+- identify the value gap between one-time and repeat buyers
+- detect retention drop-off after the first purchase
+- measure revenue concentration among top customers
+- prioritize retention and lifecycle strategies to improve long-term revenue stability
 
 ## Tools
-- Python
-- SQL
-- SQLite
-- Pandas
-- NumPy
-- Matplotlib
-- SciPy / Statsmodels
 
-## Folder Structure
+- Python
+- Pandas
+- Matplotlib
+- CSV-based analytics pipeline
+- Business segmentation
+- Cohort analysis
+
+## Project Structure
 
 ```bash
 product-growth-retention-analytics/
 ├── data/
 │   ├── raw/
 │   └── processed/
-├── sql/
 ├── src/
-├── analysis/
+├── sql/
 ├── outputs/
 │   ├── charts/
 │   └── tables/
+├── analysis/
 ├── docs/
-├── notebooks/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
 
----
-
-# Step 7 — Add starter Python loader
-
-Run:
+3. Then run:
 
 ```bash
-cat > src/load_data.py <<'EOF'
-import os
-import pandas as pd
+tail -20 README.md
+git add .
+git commit -m "Build customer retention and revenue analytics pipeline"
 
-RAW_DIR = "data/raw"
-PROCESSED_DIR = "data/processed"
+## Key Findings
 
-def load_csv(filename: str) -> pd.DataFrame:
-    path = os.path.join(RAW_DIR, filename)
-    df = pd.read_csv(path)
-    print(f"Loaded {filename}: {df.shape[0]} rows, {df.shape[1]} columns")
-    return df
-
-if __name__ == "__main__":
-    files = os.listdir(RAW_DIR)
-    if not files:
-        print("No raw data files found in data/raw")
-    else:
-        for f in files:
-            if f.endswith(".csv"):
-                load_csv(f)
+- Repeat customers represented 65.58% of the customer base but generated 93.09% of total revenue, making repeat purchase behavior the strongest long-term growth driver.
+- Revenue was highly concentrated: the top 10% of customers contributed 61.41% of revenue, while the top 20% contributed 74.66%, indicating meaningful dependency on a relatively small customer segment.
+- One-time customers generated far lower value than repeat buyers, with average revenue of 411.25 compared with 2907.99 for repeat customers.
+- Retention weakened quickly after acquisition, with average month-2 retention of 20.62%, highlighting post-purchase engagement as the main area for improvement.
