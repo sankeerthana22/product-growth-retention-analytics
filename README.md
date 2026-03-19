@@ -4,7 +4,7 @@ An end-to-end data analytics project using Python and SQL-style analytical think
 
 ## Business Problem
 
-Online retailers often grow top-line revenue without understanding whether that revenue is driven by healthy repeat-purchase behavior or by a narrow group of high-value customers. This project analyzes transactional retail data to identify customer value patterns, retention weaknesses, and revenue concentration risk.
+Online retailers often grow revenue without understanding whether performance is driven by healthy repeat-purchase behavior or by a narrow group of high-value customers. This project analyzes transactional retail data to identify customer value patterns, retention weaknesses, and revenue concentration risk.
 
 ## Objectives
 
@@ -60,6 +60,20 @@ Tracked customer activity by acquisition month and measured retention across lat
 ### 5. Revenue Concentration Analysis
 Measured the revenue share contributed by top customer groups to understand concentration risk.
 
+## Key Findings
+
+- Repeat customers represented **65.58%** of the customer base but generated **93.09%** of total revenue, making repeat purchase behavior the strongest long-term growth driver.
+- Revenue was highly concentrated: the top **10%** of customers contributed **61.41%** of revenue, while the top **20%** contributed **74.66%**, indicating meaningful dependency on a relatively small customer segment.
+- One-time customers generated far lower value than repeat buyers, with average revenue of **411.25** compared with **2907.99** for repeat customers.
+- Retention weakened quickly after acquisition, with average month-2 retention of **20.62%**, highlighting post-purchase engagement as the main area for improvement.
+
+## Business Recommendations
+
+- Prioritize retention strategies for first-time buyers, since repeat customers generate outsized value.
+- Build lifecycle campaigns targeting customers shortly after first purchase to improve month-2 retention.
+- Focus commercial attention on high-value customer segments because revenue concentration suggests a small group drives disproportionate business impact.
+- Monitor repeat purchase behavior as a core KPI, not just total revenue, to improve long-term revenue stability.
+
 ## Key Outputs
 
 - `data/processed/online_retail_cleaned.csv`
@@ -89,7 +103,7 @@ This project demonstrates how customer analytics can be used to:
 - Pandas
 - Matplotlib
 - CSV-based analytics pipeline
-- Business segmentation
+- Customer segmentation
 - Cohort analysis
 
 ## Project Structure
@@ -110,16 +124,3 @@ product-growth-retention-analytics/
 ├── requirements.txt
 └── .gitignore
 
-3. Then run:
-
-```bash
-tail -20 README.md
-git add .
-git commit -m "Build customer retention and revenue analytics pipeline"
-
-## Key Findings
-
-- Repeat customers represented 65.58% of the customer base but generated 93.09% of total revenue, making repeat purchase behavior the strongest long-term growth driver.
-- Revenue was highly concentrated: the top 10% of customers contributed 61.41% of revenue, while the top 20% contributed 74.66%, indicating meaningful dependency on a relatively small customer segment.
-- One-time customers generated far lower value than repeat buyers, with average revenue of 411.25 compared with 2907.99 for repeat customers.
-- Retention weakened quickly after acquisition, with average month-2 retention of 20.62%, highlighting post-purchase engagement as the main area for improvement.
