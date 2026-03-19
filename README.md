@@ -131,3 +131,31 @@ product-growth-retention-analytics/
 - Revenue was highly concentrated geographically, with the United Kingdom contributing **$7.29M** in revenue across **3,920** customers, far exceeding all other countries.
 - Monthly revenue fluctuated over time, with stronger performance in **May 2011 ($677.36K)** and **June 2011 ($660.05K)** compared with **February 2011 ($446.08K)**, suggesting seasonality or uneven purchasing cycles.
 - Customer revenue concentration was also visible at the individual level: the top customer generated **$280.21K**, reinforcing the finding that a small subset of customers drives disproportionate business value.
+
+
+## Decision Impact (What Should the Business Do?)
+
+Based on the analysis:
+
+- Repeat customers generate **93.09% of total revenue**, meaning even small improvements in retention can have outsized revenue impact.
+- If repeat purchase rate improves by even **5–10%**, the business can significantly increase total revenue without acquiring new customers.
+- Since the top **10% of customers drive 61.41% of revenue**, targeted retention strategies (VIP programs, personalized offers) should be prioritized.
+- Low **month-2 retention (~20.62%)** indicates a critical drop-off immediately after first purchase — this is the highest-leverage point for intervention.
+
+### Recommended Actions
+
+- Implement post-purchase engagement flows (email, offers, reminders) within the first 30 days
+- Build high-value customer retention programs (VIP segmentation)
+- Track repeat purchase rate as a core KPI instead of only total revenue
+- Focus marketing spend on retention rather than only acquisition
+
+
+## Limitations & Assumptions
+
+- The dataset contains transactional data only — no marketing channel or acquisition source information is available.
+- Customer behavior before the first purchase is not captured, limiting full funnel analysis.
+- No experimental or A/B testing data is present, so conclusions are observational, not causal.
+- Missing CustomerIDs in the raw dataset were removed, which may slightly bias results.
+- External factors (seasonality, promotions, economic conditions) are not explicitly modeled.
+
+These limitations mean the analysis focuses on identifying patterns and opportunities, not proving causation.
