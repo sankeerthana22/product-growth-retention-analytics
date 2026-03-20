@@ -315,3 +315,61 @@ This dashboard highlights key business insights:
 - Protect revenue by prioritizing retention of high-value customers
 - Convert one-time buyers into repeat customers through targeted engagement
 
+
+---
+
+## Interactive Dashboard
+
+### Customer Revenue & Retention Dashboard
+
+![Customer Revenue & Retention Dashboard](outputs/dashboard/customer_revenue_retention_dashboard.png)
+
+This Tableau dashboard summarizes the final business findings from the analysis:
+
+- **93% of revenue is driven by repeat customers**
+- **Top 20% of customers contribute ~80% of total revenue**
+- Revenue is highly concentrated among a small group of high-value customers
+- Retention is the primary driver of revenue stability
+
+---
+
+## Tableau Deliverables
+
+- `outputs/dashboard/customer_revenue_retention_analysis.twbx`
+- `outputs/dashboard/customer_revenue_retention_dashboard.png`
+
+---
+
+## Updated Business Insights
+
+**Revenue Concentration**  
+Top 20% of customers contribute ~80% of total revenue, indicating strong dependency on a small high-value customer base.
+
+**Retention Impact**  
+Repeat customers generate ~93% of total revenue, making retention the primary driver of business performance.
+
+**Action**  
+Protect revenue by prioritizing retention of high-value customers through targeted loyalty programs and personalized engagement, while converting one-time buyers into repeat customers.
+
+---
+
+## Updated Repository Structure
+
+```text
+product-growth-retention-analytics/
+├── analysis/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── outputs/
+│   ├── charts/
+│   ├── dashboard/
+│   │   ├── customer_revenue_retention_analysis.twbx
+│   │   └── customer_revenue_retention_dashboard.png
+│   └── tables/
+├── sql/
+├── src/
+├── README.md
+├── requirements.txt
+└── .gitignore
+
