@@ -295,3 +295,23 @@ Here, the central conclusion is clear:
 
 **Revenue growth depends far more on retaining and expanding repeat customer value than on simply adding more one-time buyers.**
 EOF
+## Dashboard
+
+### Customer Revenue & Retention Dashboard
+
+![Customer Revenue & Retention Dashboard](outputs/dashboard/customer_revenue_retention_dashboard.png)
+
+This dashboard highlights key business insights:
+
+- 93% of revenue is driven by repeat customers
+- Revenue is highly concentrated among top customers (Pareto principle)
+- A small group of customers contributes a disproportionate share of total revenue
+
+**Business Impact:**
+- Strong dependency on repeat customers for revenue stability
+- High revenue concentration introduces customer dependency risk
+
+**Recommendation:**
+- Protect revenue by prioritizing retention of high-value customers
+- Convert one-time buyers into repeat customers through targeted engagement
+
