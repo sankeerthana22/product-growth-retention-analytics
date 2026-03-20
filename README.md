@@ -347,3 +347,73 @@ This project shows that strong analytics is not just about producing charts or t
 Here, the central conclusion is clear:
 
 **Revenue growth depends far more on retaining and expanding repeat customer value than on simply adding more one-time buyers.**
+
+---
+
+## Scenario Analysis (Revenue Sensitivity)
+
+To understand the real impact of retention improvements, we can evaluate a simple scenario:
+
+- Repeat customers generate ~7x more revenue than one-time customers
+- Currently, repeat customers contribute **93.09%** of total revenue
+
+### Scenario: Convert 5% of one-time customers into repeat customers
+
+Even a small shift in customer composition can have outsized impact:
+
+- A 5% increase in repeat customer rate would disproportionately increase revenue contribution from high-value segments
+- Because repeat customers have significantly higher average revenue (~7x), this shift amplifies total revenue without increasing acquisition costs
+
+**Implication:**
+Retention improvements have **non-linear revenue impact**, making them more valuable than equivalent gains in acquisition.
+
+---
+
+## Decision Prioritization
+
+Based on the analysis, the business should prioritize initiatives in the following order:
+
+### 1. Early Retention Optimization (Highest Impact)
+- Improve first-to-second purchase conversion
+- Target: increase month-2 retention from ~20% → 30%
+
+### 2. High-Value Customer Protection
+- Retain top 10–20% revenue-driving customers
+- Prevent disproportionate revenue loss
+
+### 3. Acquisition Efficiency (Lower Priority)
+- Acquisition remains important, but less impactful than retention improvements
+- Focus should shift from volume → quality of customers acquired
+
+---
+
+## Risk Scenario: Customer Concentration
+
+The current revenue structure introduces a key risk:
+
+- Top **10% of customers generate 61.41% of revenue**
+
+### Scenario: Loss of top customers
+
+If a small portion of high-value customers churn:
+
+- Revenue could decline disproportionately
+- Growth stability would be significantly impacted
+
+**Implication:**
+The business must actively monitor and retain high-value customers to reduce concentration risk.
+
+---
+
+## Final Business Perspective
+
+This analysis shows that:
+
+- Growth is not primarily limited by customer acquisition
+- Growth is constrained by **retention inefficiency and revenue concentration**
+
+From a strategic standpoint:
+
+> Improving retention is not just a performance optimization  
+> — it is the **primary lever for sustainable revenue growth**
+
