@@ -4,13 +4,20 @@
 >
 > This project analyzes 541K+ real-world retail transactions to uncover how customer behavior drives revenue, where concentration risk exists, and why retention is the highest-leverage growth opportunity.
 
+## Headline Metrics
+
+- **65.58%** of customers were repeat buyers
+- **93.09%** of total revenue came from repeat customers
+- **61.41%** of revenue came from the top **10%** of customers
+- Average **month-2 retention** was **20.62%**
+
 ## Executive Summary
 
 This project evaluates customer purchase behavior using transactional retail data from a UK-based online retailer. The analysis shows that revenue is highly dependent on a relatively small group of repeat and high-value customers.
 
-Although repeat customers represent **65.58%** of the customer base, they generate **93.09%** of total revenue. At the same time, average **month-2 retention is only 20.62%**, indicating that the largest growth opportunity lies in improving early repeat purchase behavior rather than relying only on acquisition.
+Repeat customers make up **65.58%** of the customer base but generate **93.09%** of total revenue. At the same time, average **month-2 retention is only 20.62%**, showing that the largest growth opportunity lies in improving early repeat purchase behavior rather than relying only on acquisition.
 
-From a business perspective, the findings suggest that retention and lifecycle engagement should be prioritized over pure top-of-funnel growth. The business is currently exposed to customer concentration risk, as the **top 10% of customers contribute 61.41% of revenue** and the **top 20% contribute 74.66%**.
+From a business perspective, the findings suggest that retention and lifecycle engagement should be prioritized over pure top-of-funnel growth. The business is also exposed to customer concentration risk, as the **top 10% of customers contribute 61.41% of revenue** and the **top 20% contribute 74.66%**.
 
 ---
 
